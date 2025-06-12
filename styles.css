@@ -1,0 +1,187 @@
+*{
+    margin: 0; /*elimina el márgen predeterminado*/
+    padding: 0; /*elimina el relleno predeterminado*/
+    box-sizing: border-box; /*incluye el padding y el borde en el ancho y alto total*/
+    font-family: "Roboto", sans-serif; /*establece el tipo de fuente*/
+}
+
+body {
+    background: #000;
+}
+
+body::before { /*establece una capa de fondo*/
+    content: ""; /*crea un contenido vacío para la capa de fondo*/
+    position: absolute; /*posiciona de forma absoluta el cuerpo*/
+    left: 0; /*alinea la capa a la izquierda*/
+    top: 0; /*alinea la capa a la parte superior*/
+    opacity: 0.7; /*establece la opacidad de la capa*/
+    width: 100%; /*ancho completo*/
+    height: 100%; /*alto completo*/
+    background: url(img/fondo3.jpeg) no-repeat center center fixed; /*imagen de fondo quedará centrado y fijo*/
+    background-size: cover; /*ajusta la imagen para cubrir todo el fondo*/
+}
+
+.logo {
+    position: absolute; /*posiciona el logo de forma absoluta*/
+    top: 10px; /*ajusta la posición vertical del logo*/
+    left: 80px; /*ajusta la posición horizontal del logo*/
+    width: 120px; /*ancho del logo*/
+}
+
+.form-wrapper { /*estilos del contenedor del formulario*/
+    position: absolute; /*posiciona de forma absoluta*/
+    left: 50%; /*alínea el centro horizontal*/
+    top: 50%; /*alínea el centro verticalmente*/
+    transform: translate(-50%, -50%); /*centra el contenedor en ambas direcciones*/
+    border-radius: 4px; /*bordes redondeados*/
+    padding: 70px; /*añade relleno interno*/
+    width: 450px; /* ancho fijo del contenedor*/
+    background: rgb(0, 0, 0, 0.75); /*fondo negro semitransparente*/
+}
+
+.form-wrapper h2 { /*estilos del encabezado del contenedor formularios*/
+    color: #fff; /*color del texto en blanco*/
+    font-size: 2rem; /*tamaño de la fuente*/
+    margin-bottom: 25px; /*espacio inferior del encabezado*/
+}
+
+.form-control { /*estilos de los controles del formulario*/
+    height: 50px; /*alutra fija para los campos del forumario*/
+    position: relative; /*posiciona la forma relativa para los elementos hijos o internos*/
+    margin-bottom: 16px; /*margen superior entre controles*/
+}
+
+.form-control input {
+    height: 100%; /*altura completa*/
+    width: 100%; /*ancho completo*/
+    background: #333; /*fondo gris oscuro*/
+    border: none; /*sin bordes*/
+    border-radius: 4px; /*bordes redondeados*/
+    color: #ffff; /*texto blanco en el campo de entrada*/
+    font-size: 1rem; /*tamaño de la fuente*/
+    padding: 0 20px; /*relleno de la fuente*/
+    opacity: 0.7; /*opacidad de campo*/
+}
+
+.form-control input:focus{
+    background: #444; /*fondo ligeramente más claro cuando se enfoca*/
+}
+
+.form-control label {
+    position: absolute; /*posiciona de forma absoluta dentro del campo*/
+    left: 20px; /*alinea la etiqueta a la izquierda*/
+    top: 50%; /*alínea de forma vertical la etiqueta*/
+    transform: translateY(-50%); /*ajusta la posición vertical*/
+    color: #8c8c8c; /*color gris claro suave*/
+    transition: all 0.1s ease; /*transición para cambios*/
+}
+
+
+
+.form-control input:focus ~ label,
+.form-control input:valid ~ label {
+    font-size: 0.75rem; /*tamaño de la fuente reducido*/
+    transform: translateY(-130%); /*mueve la etiqueta hacia arriba*/
+}
+
+form button { /*estilos del botón*/
+    width: 100%; /*ancho completo para el botón*/
+    padding: 16px 0; /*relleno vertical del botón*/
+    font-size: 1rem; /*tamaño de la fuente*/
+    background: #e50914; /*fondo rojo para el botón*/
+    color: #fff; /*color del texto*/
+    border-radius: 4px; /*bordes redondeados*/
+    border: none; /*sin bordes*/
+    cursor: pointer; /*cambia el cursor o puntero*/
+    transition: 0.1s ease; /*transición suave para cambios*/
+    margin: 25px 0 10px; /*márgenes superior e inferior*/
+
+}
+
+form button:hover {
+    background: #c40812; /*rojo oscuro*/
+
+}
+
+.form-wrapper a { /*estilos del enlace al pasar el mouse*/
+    color: #fff; /*color del enlace*/
+    /*text-decoration: ;*/
+}
+
+.form-help {
+    display: flex; /*disposición en flex box*/
+    flex-direction: column; /*elementos uno sobre otro*/
+    align-items: flex-start;/*alinear a la izquierda*/
+}
+
+.login-container{ 
+    width: 100%; /*ancho completo*/
+    margin-bottom: 10px; /*espacio inferior del contenedor*/
+}
+
+.login-button {
+    background-color: rgba(255, 255, 255, 0.1); /*fondo gris con opacidad para el botón*/
+    color: white; /*color del texto*/
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 10px; /*relleno interno del botón*/
+    font-size: 16px; /*tamaño del texto o fuente*/
+    cursor: pointer; /*cambia el puntero*/
+    border-radius: 5px; /*bordes redondeados*/
+    transition: background color 0.3s; /*transición suave para el fondo y el borde*/
+}
+
+.login-button:hover {
+    background-color: rgba(255, 255, 255, 0.3); /*fondo más claro al pasar el mouse*/
+    border-color: rgba(255, 255, 255, 0.6); /*borde más claro al pasar el ratón*/
+}
+
+.remember-me {
+    display: flex; /*disposición en flex*/
+    align-items: center; /*alinear verticalmente*/
+    margin-top: 10px; /*espacio superior*/
+}
+
+.remember-me input {
+    margin-right: 5px; /*margen a la derecha del checkbox*/
+}
+
+.form-wrapper small {
+    display: block; /*muestra como el bloque ocupa todo el ancho*/
+    margin-top: 15px; /*margen superior*/
+    color: #b3b3b3; /*color claro*/
+}
+
+.form-wrapper small a {
+    color: #0071eb; /*cambia a blanco*/
+
+}
+
+.remember-me label {
+    color: #fff; /*cambia a blanco para la etiqueta recuérdame*/
+
+}
+
+.form-wrapper p {
+    color: #b3b3b3; /*cambia a gris claro para el texto*/
+}
+
+.form-help p {
+    text-align: center; /*centrado del texto*/
+    width: 100%; /*ancho completo para centrar correctamente*/
+    color: #b3b3b3; /*color gris*/
+}
+
+/*forma responsiva*/
+@media (max-width: 740px) { /*máximo de ancho*/
+    body::before {
+        display: none; /*oculta el fondo en pantalla pequeña*/
+    }
+
+    .form-wrapper {
+        width: 90%; /*ancho del formulario en pantalla completa*/
+        padding: 20px; /*relleno reducido en pantalla completa*/
+    }
+}
+
+
+
